@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+         <h1>Celius to Fahrenheit converter</h1>
+            <div id="input1"></div>
+            <input type="text" name="Celius" id="input" placeholder="Celius"> </input>
+        
+        <div>
+            <button type="submit" onclick="convert()">convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+       
+    </div>
+    
+    <script>
+        function convert()
+        {
+        const celval=Number(document.getElementById("input").value)
+
+        let farval=celval*1.8+32
+        let result=document.getElementById("result")
+        result.innerHTML=farval+" Fahrenheit"
+        }
+        
+    </script>
+</body>
+</html>
